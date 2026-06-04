@@ -1,0 +1,14 @@
+Parameter_Category,Parameter_Name,Value,Description
+Dataset,n_samples,256,Total number of historical operational samples for adversary training
+Dataset,train_ratio,0.8,Proportion of data allocated to the training set (80%)
+Dataset,test_ratio,0.2,Proportion of data allocated to the testing set (20%)
+Architecture,model_type,3-layer MLP,Structural classification of the neural eavesdropper
+Architecture,hidden_dimensions,"[256, 128]",Layer-by-layer neuron capacities for hidden layers
+Architecture,input_dim_x,24,Dimension of raw data layer (representing 24-hour load dynamics)
+Architecture,feature_dim_z,64,Dimension of intercepted SplitNN bottleneck latent embeddings
+Training,epochs,200,Total training iterations for offline optimization execution
+Training,batch_size,64,Mini-batch payload configuration for mini-batch gradient descent
+Training,learning_rate,0.001,Initial scaling step size constraint for the optimizer weight updates
+Training,optimizer,Adam,Optimization algorithm selected for gradient-based loss minimization
+Training,loss_function,MSE,Mean Squared Error function to evaluate load reconstruction distances
+Evaluation,metrics,"MAPE, RMSE, Corr",Quantitative validation criteria to assess defensive information leakage
