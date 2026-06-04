@@ -1,0 +1,48 @@
+{
+    "Architecture": {
+        "description": "Both Actor and Critic feature fully-connected MLPs.",
+        "model_type": "Multi-Layer Perceptron (MLP)",
+        "actor_hidden_layers": [
+            256,
+            128
+        ],
+        "critic_hidden_layers": [
+            256,
+            128
+        ]
+    },
+    "PPO_Hyperparameters": {
+        "description": "Core PPO parameters strictly aligned with Section 4.1.",
+        "actor_lr": 0.0001,
+        "critic_lr": 0.0003,
+        "gamma": 0.99,
+        "clip_ratio": 0.2,
+        "mini_batch_size": 256
+    },
+    "Training_Settings": {
+        "description": "Robustness validation across multiple seeds and stable convergence.",
+        "total_episodes": 2500,
+        "random_seeds": [
+            42,
+            43,
+            44,
+            45,
+            46
+        ],
+        "max_grad_norm": 0.35
+    },
+    "Reward_Penalties": {
+        "description": "Optimal trade-off 'sweet spot' (1.0x multiplier) from sensitivity analysis.",
+        "lambda_rocof": 1.0,
+        "lambda_nadir": 1.0,
+        "lambda_qss": 1.0,
+        "lambda_vio": 1.0
+    },
+    "Cyber_Security": {
+        "description": "Authenticated Encryption with Associated Data (AEAD) paradigm.",
+        "encryption_algorithm": "AES-256-GCM",
+        "nonce_length_bits": 96,
+        "symmetric_key_bits": 256,
+        "key_rotation": "per_scheduling_horizon"
+    }
+}
